@@ -11,11 +11,10 @@ Vue.use(VueI18n);
 import VueResource from 'vue-resource';
 Vue.use(VueResource);
 
-import SirhenDiagrammeClasse from './sirhen-diagramme-classe/sirhen-diagramme-classe.vue';
+import SirhenDiagramme from './sirhen-diagramme/sirhen-diagramme.vue';
 
 ljs.addAliases({
 	dep: ['https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
-		'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js',
 		'https://cdnjs.cloudflare.com/ajax/libs/document-register-element/1.4.1/document-register-element.js']
 })
 
@@ -38,7 +37,7 @@ ljs.load('dep', function() {
 	function registerElements() {
 			console.info("Start registration of Sirhen documentation components")
 			console.info("Registred elements at this time: "+window.registredSirhenElements)
-			registerElement('sirhen-diagramme-classe', SirhenDiagrammeClasse);
+			registerElement('sirhen-diagramme', SirhenDiagramme);
 			console.info("Sirhen documentation components registration complete")
 	}
 	

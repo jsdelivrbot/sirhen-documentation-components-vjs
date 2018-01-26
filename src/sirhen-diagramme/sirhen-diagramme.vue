@@ -67,6 +67,10 @@ export default {
 		debug:  {
 			type: Boolean,
 			default: false
+		},
+		diagram:  {
+			type: String,
+			default: 'class'
 		}
 	},
 	
@@ -101,6 +105,7 @@ export default {
 	mounted: function() {
 		this.content=this.$el.querySelector(".content").innerText.trim();
 		this.edit = this.debug;
+		this.diagramtype = this.diagram;
 		this.refreshDiagramList();
 		
 	},
@@ -113,7 +118,6 @@ export default {
 			title:"mon-schema",
 			keyprefix:"sirhen-uml-",
 			diagrams: [],
-			diagramtype:'class',
 			examples: [
 				{title:'gros diagramme de classes', diagramtype:'class', content:'[note: You can stick notes on diagrams too!{bg:cornsilk}],[Customer]<>1-orders 0..*>[Order], [Order]++*-*>[LineItem], [Order]-1>[DeliveryMethod], [Order]*-*>[Product], [Category]<->[Product], [DeliveryMethod]^[National], [DeliveryMethod]^[International]'},
 				{title:'diagramme de composants', diagramtype:'class', content:'[whizu-jquery-mobile{bg:green}]uses-.->[whizu-core],[whizu-core{bg:orange]-.->[slf4j-api-1.7.5],[whizu-core]-.->[commons-lang-2.7],  [whizu-core]-.->[servlet-api-3.1]'},

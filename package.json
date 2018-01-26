@@ -1,7 +1,7 @@
 {
   "name": "sirhen-documentation-components-vjs",
   "description": "Sirhen documentation components. ",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Sirhen",
   "private": false,
   "scripts": {
