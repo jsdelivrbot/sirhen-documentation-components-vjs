@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Sirhen Documentation</title>
+    <script type="text/javascript" component="francoisandre/sirhen-documentation-components-vjs@latest" src="https://rawgit.com/francoisandre/component-loader/master/componentLoader.js" ></script>
+  </head>
+  <body>
+  
+  <h1>Exemple de diagramme de cas d'utilisation</h1>
+  
+   <sirhen-diagramme diagram="usecase">
+   [Cms Admin]^[User]
+   </sirhen-diagramme>
+  
+  <h1>Exemple de diagramme d'activité</h1>
+   
+    <sirhen-diagramme diagram="activity">
+   (start)->[Water]->(Fill Kettle)->(end)
+   </sirhen-diagramme>
+   
+   
+   <h1>Exemple de diagramme de classe</h1>
+    <sirhen-diagramme diagram="class">
+   [note: You can stick notes on diagrams too!{bg:cornsilk}],[Customer]<>1-orders 0..*>[Order], [Order]++*-*>[LineItem], [Order]-1>[DeliveryMethod], [Order]*-*>[Product], [Category]<->[Product], [DeliveryMethod]^[National], [DeliveryMethod]^[International]
+   </sirhen-diagramme>
+  
+  </body>
+</html>
